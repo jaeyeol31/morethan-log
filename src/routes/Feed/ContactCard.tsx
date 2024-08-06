@@ -47,7 +47,20 @@ const ContactCard: React.FC = () => {
             <div className="name">email</div>
           </a>
         )}
-       
+        {CONFIG.profile.linkedin && (  // 링크드인 정보 추가
+          <a
+            href={`https://www.linkedin.com/in/${CONFIG.profile.linkedin}`}
+            rel="noreferrer"
+            target="_blank"
+          >
+            <AiFillLinkedin className="icon" />
+            <div className="name">linkedin</div>
+          </a>
+        )}
+      </StyledWrapper>
+    </>
+  )
+}
 
 export default ContactCard
 
